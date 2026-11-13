@@ -20,7 +20,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/deploy-test",
+  base: "/deploy-test/",
   build: {
     sourcemap: false,
   },
