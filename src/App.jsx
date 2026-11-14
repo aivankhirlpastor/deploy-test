@@ -4,12 +4,12 @@ import { HashRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 // variables
 async function getServerSide() {
     try {
-        const response = await fetch("https://nyc-essential-svr.vercel.app/api/servertime");
+        const response = await fetch("https://nyc-essential-timeserver.aivankhirlypastor.workers.dev/api/timeserver");
 
         if (!response.ok) {
             return {
                 serverTime: "-",
-                offset: 0,
+                offset: "n/a"
             }
         } else {
             const data = await response.json();
@@ -17,7 +17,7 @@ async function getServerSide() {
 
             return {
                 serverTime: data.serverTime,
-                offset: data.offset
+                offset: "n/a"
             }
         }
     } catch {
