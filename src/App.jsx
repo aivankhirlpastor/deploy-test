@@ -4,7 +4,7 @@ import { HashRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 // variables
 async function getServerSide() {
     try {
-        const response = await fetch("https://nyc-essential-svr-lfq4.vercel.app/api/servertime");
+        const response = await fetch("https://nyc-essential-svr.vercel.app/api/servertime");
 
         if (!response.ok) {
             return {
